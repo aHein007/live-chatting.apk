@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    @apply text-white bg-purple-400 px-3 py-2 rounded-3xl m-3
+}
+#toggle:checked ~ label div.toggle-dot {
+    @apply translate-x-3 
+}
+
+
+
+.container{
+    width: 90%;
+    max-width: 960px;
+    margin: 80px auto;
+   
+    border-radius: 20px;
+    box-shadow: 2px 10px 6px rgba(28, 6, 49, 0.1);
+    
+}
+
+.error {
+    color: #ff89b0;
+    font-size: 14px;
+  }
+
+
+  input{
+    display: flex;
+    margin: 12px auto;
+    width: 300px;
+    
+    outline: none;
+    border: none;
+    border: 1px solid rgb(240, 233, 233);
+    border-radius: 20px;
+    padding: 10px;
+    
+    
+}
+
+body{
+    background-color: rgb(188, 188, 255);
+}
