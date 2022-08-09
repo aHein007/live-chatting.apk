@@ -5,7 +5,7 @@
   <div class="container" :class="{light:changeBg==true,dark:changeBg==false}" >
         
     <!-- light and dark mode -->
-     <div class="flex justify-end mt-5 px-5 space-x-2 py-1">
+     <div class="flex justify-end mt-5 px-5 space-x-2 py-2">
         <span class="text-gray-500"><i class="fa-solid fa-sun"></i> Light</span>
           <input type="checkbox" class="hidden " name="" id="toggle">
 

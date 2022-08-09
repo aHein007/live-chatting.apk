@@ -3,8 +3,8 @@
   <form @submit.prevent="login">
     <div>
 
-        <input type="email" placeholder="Enter your email" v-model="email" class="h-10 text-sm">
-        <input type="password" placeholder="Enter your password" v-model="password" class="h-10 text-sm ">
+        <input type="email" placeholder="Enter your email" v-model="email" class="h-10 text-sm text-gray-500">
+        <input type="password" placeholder="Enter your password" v-model="password" class="h-10 text-sm text-gray-500">
         <div v-if="error" class="error">{{ error }}</div>
     </div>
         

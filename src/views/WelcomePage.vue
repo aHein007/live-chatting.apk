@@ -80,7 +80,7 @@ cursor: pointer;
 
 .dark{
   background-color:#183153;
-  color:rgb(177, 176, 176);
+  color: black;
   transition: all 0.8s ease-out;
   
 }

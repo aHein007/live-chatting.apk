@@ -3,11 +3,11 @@
   
   <form @submit.prevent="singUp">
     <div>
-        <input type="text" placeholder="Enter your name" v-model="name" class="h-10 text-sm">
+        <input type="text" placeholder="Enter your name" v-model="name" class="h-10 text-sm text-gray-500">
 
-        <input type="email" placeholder="Enter your email" v-model="email" class="h-10 text-sm">
+        <input type="email" placeholder="Enter your email" v-model="email" class="h-10 text-sm  text-gray-500">
 
-        <input type="password" placeholder="Enter your password" v-model="password" class="h-10 text-sm">
+        <input type="password" placeholder="Enter your password" v-model="password" class="h-10 text-sm  text-gray-500">
         <div class="error" v-if="error">{{ error }}</div>
     </div>
      
