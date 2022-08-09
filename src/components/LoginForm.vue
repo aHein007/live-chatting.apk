@@ -15,8 +15,10 @@
 <script>
 import { ref } from '@vue/reactivity'
 import getLogin from "../composable/getLogin"
+
 export default {
-    setup(){
+    emits:["enterChatRoom"],
+    setup(props,context){
         let email =ref("");
         let password =ref("");
         
@@ -26,10 +28,9 @@ export default {
            let res =await  loginAccount(email.value,password.value)
             if(res){
                 error.value=""
-                console.log(res.user);
+                context.emit("enterChatRoom")
             }
         }
-
         return {email,password,login,error}
     }
 }

@@ -18,11 +18,11 @@
       <h1 class="text-3xl">Post Man <i class="fa-solid fa-message"></i> </h1>  
    
     <div v-if="changeForm">
-      <LoginForm></LoginForm>
+      <LoginForm @enterChatRoom="enterChatRoom"></LoginForm>
        <p class="text"> You don't have account?<small @click="changeForm=!changeForm" class="color">Sign Up</small> here!</p>
     </div>
     <div v-else>
-       <SignFrom></SignFrom>
+       <SignFrom @enterChatRoom="enterChatRoom"></SignFrom>
       <p class="text">You have already account? <small @click="changeForm=!changeForm" class="color">Login</small> here!</p>
     </div>
     </div>
@@ -36,17 +36,22 @@
 import { ref } from '@vue/reactivity'
 import LoginForm from '../components/LoginForm'
 import SignFrom from '../components/SignFrom'
+import { useRouter } from 'vue-router'
 export default {
   components: {
     LoginForm, SignFrom },
-
+    
     setup(){
       let changeBg =ref(true)
       let changeForm =ref(true);
-     
+      let router =useRouter()
+
+     let enterChatRoom =()=>{
+      router.push({name:"chatRoom"})
+     }
       
 
-      return {changeForm,changeBg}
+      return {changeForm,changeBg,enterChatRoom}
     }
 
 }

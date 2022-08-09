@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import WelcomePage from '../views/WelcomePage.vue'
-
+import ChatRoom from "../views/ChatRoom.vue"
 
 const routes = [
   {
@@ -8,6 +8,12 @@ const routes = [
     name: 'welcomePage',
     component: WelcomePage
   },
+
+  {
+    path:"/chatRoom",
+    name:"chatRoom",
+    component:ChatRoom
+  }
   
 ]
 

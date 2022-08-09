@@ -20,7 +20,8 @@
 import { ref } from '@vue/reactivity'
 import getSingUp from "../composable/getSingUp"
 export default {
-    setup(){
+    emits:["enterChatRoom"],
+    setup(props,context){
         let name =ref("");
         let email =ref("");
         let password =ref("");
@@ -33,7 +34,7 @@ export default {
 
         if(res){
             error.value =""
-            console.log(res.user)
+            context.emit("enterChatRoom")
         }
         }
         
