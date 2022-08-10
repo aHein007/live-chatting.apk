@@ -9,6 +9,10 @@
     @apply translate-x-3 
 }
 
+.textArea{
+    @apply text-gray-500 text-sm w-full mb-6 rounded-lg box-border outline-none font-sans
+}
+
 
 
 .container{

@@ -2,7 +2,7 @@
     <nav class="flex  justify-between" v-if="user">
        <div class="px-5">
        
-         <p class="text-lg">Hi {{ user.displayName }}</p>
+         <p class="text-lg text-gray-600">Hi {{ user.displayName }}</p>
          <p class="text-sm text-gray-400">logged in as {{ user.email }}</p>
        </div>
        <button class="btn" @click="logout">Logout</button>

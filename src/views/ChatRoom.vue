@@ -5,7 +5,7 @@
   <div class="container" :class="{light:changeBg==true,dark:changeBg==false}" >
         
     <!-- light and dark mode -->
-     <div class="flex justify-end mt-5 px-5 space-x-2 py-2">
+     <!-- <div class="flex justify-end mt-5 px-5 space-x-2 py-2">
         <span class="text-gray-500"><i class="fa-solid fa-sun"></i> Light</span>
           <input type="checkbox" class="hidden " name="" id="toggle">
 
@@ -16,21 +16,29 @@
           </label>
         
         <span class="text-gray-300">Dark <i class="fa-solid fa-moon"></i></span>
-    </div>
+    </div> -->
     <!-- light and dark mode -->
-    
+
+    <!-- navBar -->
     <NaBar></NaBar>
+    <!-- chatFrom -->
+    <hr>
+    <ChatTextForm></ChatTextForm>
   </div>
 </template>
 
 <script>
+
+import ChatTextForm from '../components/ChatTextForm'
 import { ref } from '@vue/reactivity'
 import NaBar from '../components/NaBar'
 import { watch } from '@vue/runtime-core'
 import showData from '../composable/showData'
 import { useRouter } from 'vue-router'
 export default {
-  components: { NaBar },
+  components: {
+    ChatTextForm,
+     NaBar },
   setup(){
     //data
      let changeBg =ref(true)
