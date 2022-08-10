@@ -26,11 +26,26 @@
 <script>
 import { ref } from '@vue/reactivity'
 import NaBar from '../components/NaBar'
+import { watch } from '@vue/runtime-core'
+import showData from '../composable/showData'
+import { useRouter } from 'vue-router'
 export default {
   components: { NaBar },
   setup(){
+    //data
      let changeBg =ref(true)
+     let router =useRouter()
+     let {user,userData} =showData()
+       
 
+     //methods
+      watch(user,()=>{
+        if(!user.value){
+          userData()
+         router.push({name:"welcomePage"})
+  
+        }
+      })
 
      return {changeBg}
   }
